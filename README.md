@@ -407,12 +407,12 @@ about scope than imply this is more finished than it is.
 ## 19. Team
 
 
-
-| Name | Role |
-|Mayank|---|
-| Prakhar| |
-| Om| |
-| Kapil| |
+| Team Member | Role |
+|-------------|------|
+| **Mayank Sharma** | Project Lead • Multi-Agent Architecture • Backend Integration |
+| **Prakhar** | Frontend Development • UI/UX • Dashboard |
+| **Om Rawat** | Backend Development • API Integration • Agent Workflow |
+| **Kapil** | AI Engineering • Vision AI • Knowledge Base • Testing |
 
 ---
 
