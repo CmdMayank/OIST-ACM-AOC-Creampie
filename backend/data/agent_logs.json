@@ -1,0 +1,392 @@
+{
+  "logs": [
+    {
+      "agent": "PERCEPTION_AGENT",
+      "decision": "Classified as WATER_LEAKAGE, HIGH severity",
+      "evidence_used": [
+        "Image analysis: leak_01.jpg",
+        "Citizen report: CIV-2026-1001"
+      ],
+      "confidence": 0.91,
+      "recommended_action": "Proceed to clustering for related reports in the area",
+      "timestamp": "2026-07-11T00:14:15.558595+05:30"
+    },
+    {
+      "agent": "CLUSTERING_AGENT",
+      "decision": "Found 6 related reports in cluster",
+      "evidence_used": [
+        "Search radius: 180.0m",
+        "Time window: 7 days",
+        "Center: (19.1190, 72.8471)",
+        "Cluster radius: 42.0m"
+      ],
+      "confidence": 0.95,
+      "recommended_action": "Proceed to incident detection",
+      "timestamp": "2026-07-11T00:14:15.561426+05:30"
+    },
+    {
+      "agent": "INCIDENT_DETECTION_AGENT",
+      "decision": "HIGH_CONFIDENCE_CONNECTED_INCIDENT",
+      "evidence_used": [
+        "Cluster size: 7 reports",
+        "Unique issue types: 4 (ROAD_DAMAGE, WATERLOGGING, WATER_LEAKAGE, POTHOLE)",
+        "Same-type reports: 3"
+      ],
+      "confidence": 0.95,
+      "recommended_action": "Create incident and proceed to root cause analysis",
+      "timestamp": "2026-07-11T00:14:15.570024+05:30"
+    },
+    {
+      "agent": "ROOT_CAUSE_AGENT",
+      "decision": "Causal chain: WATER_LEAKAGE -> ROAD_DAMAGE -> POTHOLE",
+      "evidence_used": [
+        "Root cause",
+        "Prolonged water seepage weakens road sub-base and surface layers",
+        "Damaged road surface deteriorates into potholes under traffic load",
+        "7 related reports analyzed",
+        "4 distinct issue types identified"
+      ],
+      "confidence": 0.58,
+      "recommended_action": "Proceed to impact assessment and response planning",
+      "timestamp": "2026-07-11T00:14:15.578867+05:30"
+    },
+    {
+      "agent": "IMPACT_AGENT",
+      "decision": "Impact Score: 88.2/100 - CRITICAL",
+      "evidence_used": [
+        "Severity: 100",
+        "Proximity: 85",
+        "People affected: 90",
+        "Duration: 50 (2.9 days)",
+        "Repeat reports: 100 (7 reports)",
+        "Secondary risk: 85"
+      ],
+      "confidence": 0.9,
+      "recommended_action": "URGENT: Requires immediate multi-department response",
+      "timestamp": "2026-07-11T00:14:15.587177+05:30"
+    },
+    {
+      "agent": "RESPONSE_ORCHESTRATION_AGENT",
+      "decision": "3-step multi-department response plan created",
+      "evidence_used": [
+        "Root cause: WATER_LEAKAGE -> ROAD_DAMAGE -> POTHOLE",
+        "Priority: CRITICAL",
+        "Departments involved: Municipal Water Supply & Sewerage Board, Storm Water Drainage Department, Roads & Infrastructure Department"
+      ],
+      "confidence": 0.85,
+      "recommended_action": "REQUIRES HUMAN APPROVAL before execution",
+      "timestamp": "2026-07-11T00:14:15.595629+05:30"
+    },
+    {
+      "agent": "FILING_AGENT",
+      "decision": "Formal complaint filed as FILE-INC-2026-001 (SIMULATED)",
+      "evidence_used": [
+        "Incident: INC-2026-001",
+        "Reports: 7",
+        "Priority: CRITICAL"
+      ],
+      "confidence": 1.0,
+      "recommended_action": "Track resolution through SLA monitoring",
+      "timestamp": "2026-07-11T00:14:15.603504+05:30"
+    },
+    {
+      "agent": "PERCEPTION_AGENT",
+      "decision": "Classified as ROAD_DAMAGE, HIGH severity",
+      "evidence_used": [
+        "Image analysis: road_damage_04.jpg",
+        "Citizen report: CIV-2026-1032"
+      ],
+      "confidence": 0.87,
+      "recommended_action": "Proceed to clustering for related reports in the area",
+      "timestamp": "2026-07-11T00:14:58.401452+05:30"
+    },
+    {
+      "agent": "CLUSTERING_AGENT",
+      "decision": "Found 2 related reports in cluster",
+      "evidence_used": [
+        "Search radius: 180.0m",
+        "Time window: 7 days",
+        "Center: (19.0255, 72.8355)",
+        "Cluster radius: 76.5m"
+      ],
+      "confidence": 0.7,
+      "recommended_action": "Proceed to incident detection",
+      "timestamp": "2026-07-11T00:14:58.416824+05:30"
+    },
+    {
+      "agent": "INCIDENT_DETECTION_AGENT",
+      "decision": "POSSIBLE_CONNECTED_INCIDENT",
+      "evidence_used": [
+        "Cluster size: 3 reports",
+        "Unique issue types: 3 (ROAD_DAMAGE, GARBAGE_OVERFLOW, BROKEN_STREETLIGHT)",
+        "Same-type reports: 1"
+      ],
+      "confidence": 0.64,
+      "recommended_action": "Create incident and proceed to root cause analysis",
+      "timestamp": "2026-07-11T00:14:58.431868+05:30"
+    },
+    {
+      "agent": "ROOT_CAUSE_AGENT",
+      "decision": "Causal chain: GARBAGE_OVERFLOW -> DRAIN_BLOCKAGE -> WATERLOGGING -> ROAD_DAMAGE",
+      "evidence_used": [
+        "Root cause",
+        "Loose garbage enters and blocks nearby drain inlets",
+        "Blocked drains prevent water outflow causing surface accumulation",
+        "Standing water penetrates road layers causing structural weakness",
+        "3 related reports analyzed",
+        "3 distinct issue types identified"
+      ],
+      "confidence": 0.31,
+      "recommended_action": "Proceed to impact assessment and response planning",
+      "timestamp": "2026-07-11T00:14:58.446302+05:30"
+    },
+    {
+      "agent": "IMPACT_AGENT",
+      "decision": "Impact Score: 73.0/100 - HIGH",
+      "evidence_used": [
+        "Severity: 80",
+        "Proximity: 85",
+        "People affected: 75",
+        "Duration: 50 (2.6 days)",
+        "Repeat reports: 60 (3 reports)",
+        "Secondary risk: 65"
+      ],
+      "confidence": 0.9,
+      "recommended_action": "Schedule response per HIGH priority SLA",
+      "timestamp": "2026-07-11T00:14:58.458563+05:30"
+    },
+    {
+      "agent": "RESPONSE_ORCHESTRATION_AGENT",
+      "decision": "3-step multi-department response plan created",
+      "evidence_used": [
+        "Root cause: GARBAGE_OVERFLOW -> DRAIN_BLOCKAGE -> WATERLOGGING -> ROAD_DAMAGE",
+        "Priority: HIGH",
+        "Departments involved: Solid Waste Management Department, Roads & Infrastructure Department, Electrical & Street Lighting Department"
+      ],
+      "confidence": 0.85,
+      "recommended_action": "REQUIRES HUMAN APPROVAL before execution",
+      "timestamp": "2026-07-11T00:14:58.474274+05:30"
+    },
+    {
+      "agent": "FILING_AGENT",
+      "decision": "Formal complaint filed as FILE-INC-2026-002 (SIMULATED)",
+      "evidence_used": [
+        "Incident: INC-2026-002",
+        "Reports: 3",
+        "Priority: HIGH"
+      ],
+      "confidence": 1.0,
+      "recommended_action": "Track resolution through SLA monitoring",
+      "timestamp": "2026-07-11T00:14:58.488612+05:30"
+    },
+    {
+      "agent": "PERCEPTION_AGENT",
+      "decision": "Classified as DRAIN_BLOCKAGE, MEDIUM severity",
+      "evidence_used": [
+        "Image analysis: drain_04.jpg",
+        "Citizen report: CIV-2026-1050",
+        "Visual: Observed defect matching category: drain blockage",
+        "Visual: Observed severity level assessed as medium",
+        "Visual: Visual validation matches known demographic seeds"
+      ],
+      "confidence": 0.81,
+      "recommended_action": "Proceed to clustering for related reports in the area",
+      "timestamp": "2026-07-11T00:24:56.646477+05:30"
+    },
+    {
+      "agent": "CLUSTERING_AGENT",
+      "decision": "Found 0 related reports in cluster",
+      "evidence_used": [
+        "Search radius: 180.0m",
+        "Time window: 7 days",
+        "Center: (19.1100, 72.8600)",
+        "Cluster radius: 0m"
+      ],
+      "confidence": 0.5,
+      "recommended_action": "File as independent complaint",
+      "timestamp": "2026-07-11T00:24:56.649133+05:30"
+    },
+    {
+      "agent": "INCIDENT_DETECTION_AGENT",
+      "decision": "INDEPENDENT_COMPLAINTS",
+      "evidence_used": [
+        "Cluster size: 1 reports",
+        "Unique issue types: 1 (DRAIN_BLOCKAGE)",
+        "Same-type reports: 1"
+      ],
+      "confidence": 0.5,
+      "recommended_action": "File as independent complaint",
+      "timestamp": "2026-07-11T00:24:56.663242+05:30"
+    },
+    {
+      "agent": "PERCEPTION_AGENT",
+      "decision": "Classified as ROAD_DAMAGE, MEDIUM severity",
+      "evidence_used": [
+        "Image analysis: report_1ebe2fa7.webp",
+        "Citizen report: CIV-2026-1051",
+        "Visual: road surface defect matching citizen description text",
+        "Visual: visual abnormality requiring active location audit",
+        "Visual: unidentified structural decay reported"
+      ],
+      "confidence": 0.5,
+      "recommended_action": "Proceed to clustering for related reports in the area",
+      "timestamp": "2026-07-11T00:46:17.139030+05:30"
+    },
+    {
+      "agent": "CLUSTERING_AGENT",
+      "decision": "Found 0 related reports in cluster",
+      "evidence_used": [
+        "Search radius: 180.0m",
+        "Time window: 7 days",
+        "Center: (42.5310, 72.8420)",
+        "Cluster radius: 0m"
+      ],
+      "confidence": 0.5,
+      "recommended_action": "File as independent complaint",
+      "timestamp": "2026-07-11T00:46:17.163846+05:30"
+    },
+    {
+      "agent": "INCIDENT_DETECTION_AGENT",
+      "decision": "INDEPENDENT_COMPLAINTS",
+      "evidence_used": [
+        "Cluster size: 1 reports",
+        "Unique issue types: 1 (ROAD_DAMAGE)",
+        "Same-type reports: 1"
+      ],
+      "confidence": 0.5,
+      "recommended_action": "File as independent complaint",
+      "timestamp": "2026-07-11T00:46:17.184582+05:30"
+    },
+    {
+      "agent": "PERCEPTION_AGENT",
+      "decision": "Classified as ROAD_DAMAGE, MEDIUM severity",
+      "evidence_used": [
+        "Image analysis: report_1ebe2fa7.webp",
+        "Citizen report: CIV-2026-1051",
+        "Visual: road surface defect matching citizen description text",
+        "Visual: visual abnormality requiring active location audit",
+        "Visual: unidentified structural decay reported"
+      ],
+      "confidence": 0.5,
+      "recommended_action": "Proceed to clustering for related reports in the area",
+      "timestamp": "2026-07-11T00:46:17.239289+05:30"
+    },
+    {
+      "agent": "CLUSTERING_AGENT",
+      "decision": "Found 0 related reports in cluster",
+      "evidence_used": [
+        "Search radius: 180.0m",
+        "Time window: 7 days",
+        "Center: (42.5310, 72.8420)",
+        "Cluster radius: 0m"
+      ],
+      "confidence": 0.5,
+      "recommended_action": "File as independent complaint",
+      "timestamp": "2026-07-11T00:46:17.263864+05:30"
+    },
+    {
+      "agent": "INCIDENT_DETECTION_AGENT",
+      "decision": "INDEPENDENT_COMPLAINTS",
+      "evidence_used": [
+        "Cluster size: 1 reports",
+        "Unique issue types: 1 (ROAD_DAMAGE)",
+        "Same-type reports: 1"
+      ],
+      "confidence": 0.5,
+      "recommended_action": "File as independent complaint",
+      "timestamp": "2026-07-11T00:46:17.282458+05:30"
+    },
+    {
+      "agent": "PERCEPTION_AGENT",
+      "decision": "Classified as POTHOLE, HIGH severity",
+      "evidence_used": [
+        "Image analysis: pothole_04.jpg",
+        "Citizen report: CIV-2026-1016",
+        "Visual: Observed defect matching category: pothole",
+        "Visual: Observed severity level assessed as high",
+        "Visual: Visual validation matches known demographic seeds"
+      ],
+      "confidence": 0.92,
+      "recommended_action": "Proceed to clustering for related reports in the area",
+      "timestamp": "2026-07-11T00:46:41.339396+05:30"
+    },
+    {
+      "agent": "CLUSTERING_AGENT",
+      "decision": "Found 1 related reports in cluster",
+      "evidence_used": [
+        "Search radius: 180.0m",
+        "Time window: 7 days",
+        "Center: (19.0540, 72.8401)",
+        "Cluster radius: 11.9m"
+      ],
+      "confidence": 0.6,
+      "recommended_action": "Proceed to incident detection",
+      "timestamp": "2026-07-11T00:46:41.360523+05:30"
+    },
+    {
+      "agent": "INCIDENT_DETECTION_AGENT",
+      "decision": "POSSIBLE_CONNECTED_INCIDENT",
+      "evidence_used": [
+        "Cluster size: 2 reports",
+        "Unique issue types: 2 (ROAD_DAMAGE, POTHOLE)",
+        "Same-type reports: 1"
+      ],
+      "confidence": 0.6100000000000001,
+      "recommended_action": "Create incident and proceed to root cause analysis",
+      "timestamp": "2026-07-11T00:46:41.375466+05:30"
+    },
+    {
+      "agent": "ROOT_CAUSE_AGENT",
+      "decision": "Causal chain: ROAD_DAMAGE -> POTHOLE",
+      "evidence_used": [
+        "Root cause",
+        "Damaged road surface deteriorates into potholes under traffic load",
+        "2 related reports analyzed",
+        "2 distinct issue types identified"
+      ],
+      "confidence": 0.9,
+      "recommended_action": "Proceed to impact assessment and response planning",
+      "timestamp": "2026-07-11T00:46:41.395662+05:30"
+    },
+    {
+      "agent": "IMPACT_AGENT",
+      "decision": "Impact Score: 53.0/100 - HIGH",
+      "evidence_used": [
+        "Severity: 80",
+        "Proximity: 30",
+        "People affected: 30",
+        "Duration: 50 (2.1 days)",
+        "Repeat reports: 30 (2 reports)",
+        "Secondary risk: 70"
+      ],
+      "confidence": 0.9,
+      "recommended_action": "Schedule response per HIGH priority SLA",
+      "timestamp": "2026-07-11T00:46:41.411494+05:30"
+    },
+    {
+      "agent": "RESPONSE_ORCHESTRATION_AGENT",
+      "decision": "1-step multi-department response plan created",
+      "evidence_used": [
+        "Root cause: ROAD_DAMAGE -> POTHOLE",
+        "Priority: HIGH",
+        "Departments involved: Roads & Infrastructure Department"
+      ],
+      "confidence": 0.85,
+      "recommended_action": "REQUIRES HUMAN APPROVAL before execution",
+      "timestamp": "2026-07-11T00:46:41.428464+05:30"
+    },
+    {
+      "agent": "FILING_AGENT",
+      "decision": "Formal complaint filed as FILE-INC-2026-003 (SIMULATED)",
+      "evidence_used": [
+        "Incident: INC-2026-003",
+        "Reports: 2",
+        "Priority: HIGH"
+      ],
+      "confidence": 1.0,
+      "recommended_action": "Track resolution through SLA monitoring",
+      "timestamp": "2026-07-11T00:46:41.443143+05:30"
+    }
+  ],
+  "total": 30
+}
