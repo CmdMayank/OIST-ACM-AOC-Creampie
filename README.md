@@ -406,13 +406,13 @@ about scope than imply this is more finished than it is.
 
 ## 19. Team
 
-*[Add your team name, member names, and roles here.]*
+
 
 | Name | Role |
-|---|---|
-| | |
-| | |
-| | |
+|Mayank|---|
+| Prakhar| |
+| Om| |
+| Kapil| |
 
 ---
 
