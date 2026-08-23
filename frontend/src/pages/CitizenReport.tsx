@@ -9,11 +9,11 @@ type LocationStatus = 'idle' | 'detecting' | 'success' | 'denied';
 export default function CitizenReport() {
   const navigate = useNavigate();
   const [inputMode, setInputMode] = useState<InputMode>('UPLOAD');
-  
+
   // Demo Mode States
   const [images, setImages] = useState<string[]>([]);
   const [selectedDemoImage, setSelectedDemoImage] = useState('');
-  
+
   // Upload Mode States
   const [uploadedFile, setUploadedFile] = useState<File | null>(null);
   const [filePreview, setFilePreview] = useState<string>('');
@@ -23,12 +23,12 @@ export default function CitizenReport() {
   const [citizenName, setCitizenName] = useState('Anonymous');
   const [phone, setPhone] = useState('+91-98200-11111');
   const [description, setDescription] = useState('');
-  
+
   // Location States (explicit for Upload mode)
   const [locationName, setLocationName] = useState('');
   const [latitude, setLatitude] = useState<string>('');
   const [longitude, setLongitude] = useState<string>('');
-  const [geolocating, setGeolocating] = useState(false);
+  const [, setGeolocating] = useState(false);
   const [locationStatus, setLocationStatus] = useState<LocationStatus>('idle');
 
   const [submitting, setSubmitting] = useState(false);
@@ -185,7 +185,7 @@ export default function CitizenReport() {
   // Form Submit
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Validations
     if (inputMode === 'UPLOAD' && !uploadedFile) {
       alert('Please upload a civic issue photo.');
@@ -243,7 +243,7 @@ export default function CitizenReport() {
 
       {!submittedReport ? (
         <form onSubmit={handleSubmit} style={{ display: 'grid', gridTemplateColumns: '1fr', gap: 16 }}>
-          
+
           {/* Segmented Selector for Input Mode */}
           <div style={{
             display: 'flex',
@@ -327,7 +327,7 @@ export default function CitizenReport() {
                       Drag and drop an image here or click to browse
                     </div>
                   </div>
-                  
+
                   <input
                     id="citizen-photo-input"
                     type="file"

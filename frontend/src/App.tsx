@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom';
 import { Activity, FileText, Sun, Moon } from 'lucide-react';
+import LandingPage from './pages/LandingPage';
 import Dashboard from './pages/Dashboard';
 import CitizenReport from './pages/CitizenReport';
 import { ThemeProvider, useTheme } from './context/ThemeContext';
@@ -23,7 +24,7 @@ function AppShell() {
         zIndex: 50,
         transition: 'background 0.2s ease, border-color 0.2s ease',
       }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginRight: 32 }}>
+        <NavLink to="/" end style={{ textDecoration: 'none', color: 'inherit', display: 'flex', alignItems: 'center', gap: 8, marginRight: 32 }}>
           <Activity size={18} color="var(--accent-blue)" />
           <span style={{ fontWeight: 700, fontSize: 15, letterSpacing: '-0.01em' }}>
             CivicIQ
@@ -38,10 +39,10 @@ function AppShell() {
           }}>
             PROTOTYPE
           </span>
-        </div>
+        </NavLink>
 
         <div style={{ display: 'flex', gap: 4 }}>
-          <NavLink to="/" end style={({ isActive }) => ({
+          <NavLink to="/dashboard" style={({ isActive }) => ({
             padding: '6px 12px',
             borderRadius: 5,
             fontSize: 13,
@@ -95,7 +96,8 @@ function AppShell() {
       {/* Routes */}
       <main style={{ flex: 1, padding: '20px 24px' }}>
         <Routes>
-          <Route path="/" element={<Dashboard />} />
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/report" element={<CitizenReport />} />
         </Routes>
       </main>
