@@ -370,3 +370,14 @@ textarea.input {
 @keyframes spin {
   to { transform: rotate(360deg); }
 }
+
+/* ── Footer ───────────────────────────────────────────────────────────── */
+.footer-link {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+  color: var(--text-primary);
+}

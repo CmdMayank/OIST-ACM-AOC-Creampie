@@ -105,13 +105,27 @@ function AppShell() {
       {/* Footer */}
       <footer style={{
         borderTop: '1px solid var(--border-primary)',
-        padding: '10px 24px',
-        fontSize: 11,
+        padding: '16px 24px',
+        fontSize: 12,
         color: 'var(--text-tertiary)',
-        textAlign: 'center',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        gap: '8px',
         transition: 'border-color 0.2s ease',
       }}>
-        Prototype uses synthetic civic data for demonstration. All root-cause output is AI-generated civic incident hypothesis.
+        <div style={{
+          display: 'flex',
+          gap: '24px',
+          fontWeight: 500
+        }}>
+          <a href="#" className="footer-link">Terms & Conditions</a>
+          <a href="#" className="footer-link">Privacy Policy</a>
+          <a href="#" className="footer-link">Developer Contact</a>
+        </div>
+        <div style={{ fontSize: 11, textAlign: 'center' }}>
+          Prototype uses synthetic civic data for demonstration. All root-cause output is AI-generated civic incident hypothesis.
+        </div>
       </footer>
     </div>
   );
