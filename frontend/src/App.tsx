@@ -1,8 +1,12 @@
-import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, NavLink, Link } from 'react-router-dom';
 import { Activity, FileText, Sun, Moon } from 'lucide-react';
+import { FiInstagram, FiTwitter, FiLinkedin, FiGithub } from 'react-icons/fi';
 import LandingPage from './pages/LandingPage';
 import Dashboard from './pages/Dashboard';
 import CitizenReport from './pages/CitizenReport';
+import TermsAndConditions from './pages/TermsAndConditions';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import DeveloperContact from './pages/DeveloperContact';
 import { ThemeProvider, useTheme } from './context/ThemeContext';
 import './index.css';
 
@@ -77,9 +81,25 @@ function AppShell() {
         </div>
 
         <div style={{ marginLeft: 'auto', display: 'flex', alignItems: 'center', gap: 12 }}>
-          <span style={{ fontSize: 11, color: 'var(--text-tertiary)' }}>
+          <span className="nav-disclaimer" style={{ fontSize: 11, color: 'var(--text-tertiary)' }}>
             Prototype uses synthetic civic data for demonstration
           </span>
+
+          {/* Social Icons */}
+          <div className="nav-social-container" style={{ display: 'flex', gap: 4, alignItems: 'center', marginRight: 4 }}>
+            <a href="https://www.instagram.com/aka.mayankkk/" target="_blank" rel="noopener noreferrer" className="nav-social-link" aria-label="Instagram" title="Instagram">
+              <FiInstagram size={16} />
+            </a>
+            <a href="https://x.com/MayannkkSharma" target="_blank" rel="noopener noreferrer" className="nav-social-link" aria-label="X (Twitter)" title="X">
+              <FiTwitter size={16} />
+            </a>
+            <a href="https://www.linkedin.com/in/sharmamayankk/" target="_blank" rel="noopener noreferrer" className="nav-social-link" aria-label="LinkedIn" title="LinkedIn">
+              <FiLinkedin size={16} />
+            </a>
+            <a href="https://github.com/CmdMayank" target="_blank" rel="noopener noreferrer" className="nav-social-link" aria-label="GitHub" title="GitHub">
+              <FiGithub size={16} />
+            </a>
+          </div>
 
           {/* Light / Dark mode toggle */}
           <button
@@ -99,6 +119,9 @@ function AppShell() {
           <Route path="/" element={<LandingPage />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/report" element={<CitizenReport />} />
+          <Route path="/terms" element={<TermsAndConditions />} />
+          <Route path="/privacy" element={<PrivacyPolicy />} />
+          <Route path="/contact" element={<DeveloperContact />} />
         </Routes>
       </main>
 
@@ -119,9 +142,9 @@ function AppShell() {
           gap: '24px',
           fontWeight: 500
         }}>
-          <a href="#" className="footer-link">Terms & Conditions</a>
-          <a href="#" className="footer-link">Privacy Policy</a>
-          <a href="#" className="footer-link">Developer Contact</a>
+          <Link to="/terms" className="footer-link">Terms & Conditions</Link>
+          <Link to="/privacy" className="footer-link">Privacy Policy</Link>
+          <Link to="/contact" className="footer-link">Developer Contact</Link>
         </div>
         <div style={{ fontSize: 11, textAlign: 'center' }}>
           Prototype uses synthetic civic data for demonstration. All root-cause output is AI-generated civic incident hypothesis.

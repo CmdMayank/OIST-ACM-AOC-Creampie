@@ -381,3 +381,32 @@ textarea.input {
 .footer-link:hover {
   color: var(--text-primary);
 }
+
+/* ── Navbar Social Icons ─────────────────────────────────────────────────── */
+.nav-social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  color: var(--text-tertiary);
+  transition: all 0.15s ease;
+  text-decoration: none;
+}
+
+.nav-social-link:hover, .nav-social-link:focus {
+  color: var(--text-primary);
+  background: var(--bg-tertiary);
+  outline: none;
+}
+
+.nav-social-link:focus-visible {
+  box-shadow: 0 0 0 2px var(--accent-blue);
+}
+
+@media (max-width: 800px) {
+  .nav-disclaimer {
+    display: none;
+  }
+}
